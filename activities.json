@@ -1,0 +1,22 @@
+[
+  {
+    "id": "54321234",
+    "activity_submitted": "1719486190058",
+    "activity_type": "run",
+    "activity_duration": "30"
+  },
+
+  {
+    "id": "55554444",
+    "activity_submitted": "1111133333444",
+    "activity_type": "skip",
+    "activity_duration": "15"
+  },
+
+  {
+    "id": "55555666",
+    "activity_submitted": "1111133333445",
+    "activity_type": "swim",
+    "activity_duration": "60"
+  }
+]
