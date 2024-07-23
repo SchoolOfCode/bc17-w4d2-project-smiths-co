@@ -2,6 +2,8 @@ import express from 'express';
 import helmet from 'helmet';
 import activities from './activities.json' with {type: "json"}
 
+console.log(activities);
+
 const app = express();
 const port = 3000;
 
@@ -14,7 +16,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/activities', (req, res) => {
-  res.send('');
+  res.json(activities);
 });
 
 app.listen(port),
