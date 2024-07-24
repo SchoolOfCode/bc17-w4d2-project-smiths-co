@@ -4,7 +4,10 @@ import express from 'express';
 import helmet from 'helmet';
 import activities from './activities.json' with {type: "json"}
 
+// using express to create an application 
 const app = express();
+
+// save port in a variable
 const port = 3000;
 
 // Middleware
