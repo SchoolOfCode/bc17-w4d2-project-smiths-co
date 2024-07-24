@@ -16,18 +16,16 @@ app.get('/', (req, res) => {
 
 // Activities request handler
 app.get('/activities/:userid', (req, res) => {
-  //console.log(req.params.userid);
+const userid = req.params.userid
 
-  // TODO: Frank is going to finish this!
-  activities.forEach(function (arrayElement) {
-    if (arrayElement.id === "55554444") {
-      console.log(arrayElement);
+let responseData = []
+ 
+activities.forEach(function (arrayElement) {
+    if (arrayElement.id === userid) {
+      responseData.push(arrayElement)
     }
   })
-
-  //const userActivity = activities
-
-  res.json(activities);
+  res.json(responseData);
 });
 
 app.listen(port),
