@@ -25,7 +25,7 @@ app.get('/', (req, res) => {
 //Epic 2 - User Story 1: Implement functionality to get all activities for a particular user
 
 app.get('/activities/:userid', (req, res) => {
-// create variable to capture dynamic values from the URL path
+// create a variable to capture path paramater from the GET request URL
   const userid = req.params.userid
 
 // create blank array so we can shove multiple objects into the array
