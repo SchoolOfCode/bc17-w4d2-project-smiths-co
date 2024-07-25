@@ -6,6 +6,9 @@ import express from 'express';
 import helmet from 'helmet';
 import activities from './activities.json' with {type: "json"}
 
+/*
+Express application setup
+*/
 // using express to create an application
 const app = express();
 
