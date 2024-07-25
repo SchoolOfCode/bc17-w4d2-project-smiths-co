@@ -14,6 +14,7 @@ const port = 3000;
 // Epic 1 - User Story 2 Add basic security standards using Helmet
 
 app.use(helmet());
+app.use(express.json())
 
 // Request handlers
 // Root/default request handler
@@ -43,6 +44,18 @@ activities.forEach(function (arrayElement) {
   res.status(200);
   res.json(responseData);
 });
+
+
+//app.post request handler
+app.post('/activities' , (req , res)  => {
+
+//Whatever the body of the request is, we will save it as 'newActivity'
+let newActivity = req.body
+res.send("POST processed")
+activities.push(newActivity)
+console.log(activities)
+})
+
 
 // spin up the express server
 app.listen(port),
