@@ -35,13 +35,11 @@ app.get('/', (req, res) => {
 
 // Activities GET request handler - BASIC VERSION - RETURN ALL ACTIVITIES IN OUR JSON FILE
 // Epic 2 - User Story 1: Implement functionality to get all activities
-/*
 app.get('/activities', (req, res) => {
   // Send the response status code 200 and the data inside the activities array
   res.status(200);
   res.json(activities);
 });
-*/
 
 // Activities GET request handler - ADVANCED VERSION - RETURN ACTIVITIES FOR A PARTICULAR USER
 // Epic 2 - User Story 1: Implement functionality to get all activities for a particular user
