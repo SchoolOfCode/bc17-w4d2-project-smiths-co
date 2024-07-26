@@ -6,6 +6,9 @@ import express from 'express';
 import helmet from 'helmet';
 import activities from './activities.json' with {type: "json"}
 
+// install uuid for unique userId numbers 
+import { v4 as uuidv4 } from 'uuid';
+
 /*
 Express application setup
 */
@@ -63,11 +66,22 @@ app.get('/activities/:userid', (req, res) => {
 // Activities POST request handler
 // Epic 2 - User Story 2: Implement functionality to POST a new activity.
 app.post('/activities', (req, res) => {
-  // Whatever the body of the request is, we will save it as 'newActivity'
+  
+  // Take post request from client `req.body...`
   let newActivity = req.body;
-  res.send('POST processed');
+
+  // Update activities array with new activity object (spread operator) + push.
+  // Implement `date.now` and UUID.
+    newActivity = {
+    id:uuidv4(),
+    activity_submitted:Date.now(),
+    ...newActivity        
+    }
+
+  // Add a new object to our current in memory activities array.
   activities.push(newActivity);
   console.log(activities);
+  res.send('POST processed')
 });
 
 /*
